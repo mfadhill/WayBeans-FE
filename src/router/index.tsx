@@ -8,6 +8,10 @@ import DetailProduct from "../pages/detailProduct";
 import Profile from "../pages/profile";
 import Cart from "../pages/auth/Cart";
 import BuyerLayout from "../layout/BuyerLayout";
+import SellerLayout from "../layout/SellerLayout";
+import SellerDashboard from "../pages/SellerDashboard";
+import TransactionForm from "../pages/transactionForm";
+import ProductForm from "../pages/productForm";
 
 const router: RouteObject[] = [
     {
@@ -44,10 +48,10 @@ const router: RouteObject[] = [
                 path: "cart",
                 element: <Cart />,
             },
-            // {
-            //     path: "transaction/:id",
-            //     element: <TransactionForm />,
-            // },
+            {
+                path: "transaction/:id",
+                element: <TransactionForm />,
+            },
         ],
     },
     {
@@ -61,6 +65,20 @@ const router: RouteObject[] = [
             {
                 path: "detailProduct/:id",
                 element: <DetailProduct />,
+            },
+        ],
+    },
+    {
+        path: "/seller",
+        element: <SellerLayout />,
+        children: [
+            {
+                index: true,
+                element: <SellerDashboard />,
+            },
+            {
+                path: "productform",
+                element: <ProductForm />,
             },
         ],
     },

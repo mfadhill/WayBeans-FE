@@ -41,7 +41,7 @@ const SellerNavbar: React.FC<IPorps> = ({ image }: IPorps) => {
         <StyledAppBar position="static">
             <Toolbar sx={{ justifyContent: "space-between" }}>
                 <Link to={'/seller'} style={{ textDecoration: "none" }}>
-                    <img height={'50px'} src="/image.png" />
+                    <img height={'50px'} src="/logo.png" />
                 </Link>
                 <IconButton
                     size="large"
@@ -51,7 +51,7 @@ const SellerNavbar: React.FC<IPorps> = ({ image }: IPorps) => {
                     sx={{ mr: 2 }}
                     onClick={handleClick}
                 >
-                    <Avatar alt="User Avatar" src="/beans.png" />
+                    <Avatar alt="User Avatar" src="/avatar.png" />
                 </IconButton>
                 <Menu
                     anchorEl={anchorEl}
@@ -75,7 +75,7 @@ const SellerNavbar: React.FC<IPorps> = ({ image }: IPorps) => {
                                 display: "flex",
                             }}
                         >
-                            <img src='/logo.png' width={'20px'} height={'20px'} />
+                            <img src='/beans.png' width={'20px'} height={'20px'} />
                             <Typography fontWeight={"700"}> Add Product</Typography>
                         </Box>
                     </MenuItem>
